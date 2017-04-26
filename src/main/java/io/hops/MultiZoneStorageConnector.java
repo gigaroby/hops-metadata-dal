@@ -3,18 +3,16 @@ package io.hops;
 import io.hops.exception.StorageException;
 import io.hops.transaction.TransactionCluster;
 
-import java.util.Properties;
-
 /**
- * MultiZoneStorageConnector holds one or more storage connectors that connect to (up to) two clusters.
+ * This class allows its clients to retrieve a connector for the required cluster (primary or local).
  */
 public interface MultiZoneStorageConnector {
   /**
-   * connectorFor returns a StorageConnector for the appropriate cluster.
-   * Note that if the configuration supplied to setConfiguration only configures
-   * one cluster, that will be returned, regardless of the value of the cluster parameter.
-   * @param cluster whether to connect to the local or primary cluster. Not that they may be the same
-   * @return the appropriate storage zoneConnector
+   * This method returns a StorageConnector for the appropriate cluster.
+   * Note that on the primary cluster this parameter will be ignored as the primary cluster is also the local one.
+   * @param cluster whether to connect to the local or primary cluster
+   * @return the appropriate storage connector
+   * @throws StorageException if a connector cannot be returned
    */
-  StorageConnector connectorFor(TransactionCluster cluster);
+  StorageConnector connectorFor(TransactionCluster cluster) throws StorageException;
 }
