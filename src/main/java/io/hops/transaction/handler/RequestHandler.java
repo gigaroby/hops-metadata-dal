@@ -15,7 +15,7 @@
  */
 package io.hops.transaction.handler;
 
-import io.hops.MultiZoneStorageConnector;
+import io.hops.multizone.MultiZoneStorageConnector;
 import io.hops.StorageConnector;
 import io.hops.transaction.TransactionCluster;
 import org.apache.commons.logging.Log;

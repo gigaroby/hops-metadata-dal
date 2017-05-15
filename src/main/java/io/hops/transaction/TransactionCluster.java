@@ -3,9 +3,8 @@ package io.hops.transaction;
 /**
  * TransactionCluster indicates which MySQL Cluster cluster to connect to.
  * Note that PRIMARY and LOCAL are the same cluster if either:
- * 1) No secondary cluster is configured.
- * 2) The MySQL Cluster cluster localized in the same Availability Zone
- *    is the primary cluster.
+ * 1) No secondary cluster is configured (multizone mode is disabled).
+ * 2) The local cluster is the primary cluster.
  */
 public enum TransactionCluster {
   /**

@@ -1,7 +1,9 @@
-package io.hops;
+package io.hops.multizone;
 
+import io.hops.StorageConnector;
 import io.hops.exception.StorageException;
 import io.hops.transaction.TransactionCluster;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * This class allows its clients to retrieve a connector for the required cluster (primary or local).

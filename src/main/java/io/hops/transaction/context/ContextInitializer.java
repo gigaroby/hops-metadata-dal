@@ -17,7 +17,7 @@ package io.hops.transaction.context;
 
 import java.util.Map;
 
-import io.hops.MultiZoneStorageConnector;
+import io.hops.multizone.MultiZoneStorageConnector;
 import io.hops.StorageConnector;
 
 public interface ContextInitializer {

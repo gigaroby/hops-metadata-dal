@@ -31,7 +31,6 @@
 package io.hops.transaction.lock;
 
 import io.hops.metadata.common.entity.Variable;
-import io.hops.transaction.TransactionCluster;
 
 import java.io.IOException;
 import java.util.EnumMap;

@@ -17,6 +17,7 @@ package io.hops;
 
 import io.hops.exception.StorageInitializtionException;
 import io.hops.metadata.common.EntityDataAccess;
+import io.hops.multizone.MultiZoneStorageConnector;
 
 import java.util.Properties;
 

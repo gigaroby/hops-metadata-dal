@@ -17,7 +17,6 @@ package io.hops.metadata.yarn.dal;
 
 import io.hops.exception.StorageException;
 import io.hops.metadata.common.EntityDataAccess;
-import io.hops.transaction.TransactionCluster;
 
 
 public interface FullRMNodeDataAccess<T> extends EntityDataAccess {

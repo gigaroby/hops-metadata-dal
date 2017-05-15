@@ -45,16 +45,20 @@ public abstract class LeDescriptor
   private String hostName;
   private String httpAddress;
   private final int partitionVal = 0;
+  private String zone;
+  private boolean connectedToPrimary;
 
   protected LeDescriptor() {
   }
 
   protected LeDescriptor(long id, long counter, String hostName,
-      String httpAddress) {
+      String httpAddress, String zone, boolean connectedToPrimary) {
     this.id = id;
     this.counter = counter;
     this.hostName = hostName;
     this.httpAddress = httpAddress;
+    this.connectedToPrimary = connectedToPrimary;
+    this.zone = zone;
   }
 
   public long getId() {
@@ -91,6 +95,22 @@ public abstract class LeDescriptor
 
   public int getPartitionVal() {
     return partitionVal;
+  }
+
+  public String getZone() {
+    return zone;
+  }
+
+  public void setZone(String zone) {
+    this.zone = zone;
+  }
+
+  public boolean isConnectedToPrimary() {
+    return connectedToPrimary;
+  }
+
+  public void setConnectedToPrimary(boolean connectedToPrimary) {
+    this.connectedToPrimary = connectedToPrimary;
   }
 
   @Override
@@ -166,7 +186,7 @@ public abstract class LeDescriptor
 
     public YarnLeDescriptor(long id, long counter, String hostName,
         String httpAddress) {
-      super(id, counter, hostName, httpAddress);
+      super(id, counter, hostName, httpAddress, "primary", false);
     }
   }
 
@@ -196,8 +216,8 @@ public abstract class LeDescriptor
     }
 
     public HdfsLeDescriptor(long id, long counter, String hostName,
-        String httpAddress) {
-      super(id, counter, hostName, httpAddress);
+        String httpAddress, String zone, boolean connectedToPrimary) {
+      super(id, counter, hostName, httpAddress, zone, connectedToPrimary);
     }
   }
 }

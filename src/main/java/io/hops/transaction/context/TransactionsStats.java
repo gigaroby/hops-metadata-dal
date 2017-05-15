@@ -17,7 +17,6 @@ package io.hops.transaction.context;
 
 import io.hops.metadata.common.FinderType;
 import io.hops.transaction.EntityManager;
-import io.hops.transaction.TransactionCluster;
 import io.hops.transaction.handler.RequestHandler;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

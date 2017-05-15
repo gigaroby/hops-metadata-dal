@@ -34,7 +34,6 @@ import io.hops.exception.StorageException;
 import io.hops.exception.TransactionContextException;
 import io.hops.metadata.common.FinderType;
 import io.hops.transaction.EntityManager;
-import io.hops.transaction.TransactionCluster;
 
 import java.io.IOException;
 import java.util.Collection;

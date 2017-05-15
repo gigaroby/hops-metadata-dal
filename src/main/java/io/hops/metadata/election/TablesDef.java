@@ -16,19 +16,21 @@
 package io.hops.metadata.election;
 
 public class TablesDef {
-  public abstract static interface LeDescriptorTableDef {
-    public static final String ID = "id";
-    public static final String COUNTER = "counter";
-    public static final String HOSTNAME = "hostname";
-    public static final String HTTP_ADDRESS = "httpAddress";
-    public static final String PARTITION_VAL = "partition_val";
+  public interface LeDescriptorTableDef {
+    String ID = "id";
+    String COUNTER = "counter";
+    String HOSTNAME = "hostname";
+    String HTTP_ADDRESS = "httpAddress";
+    String PARTITION_VAL = "partition_val";
+    String ZONE = "zone";
+    String CONNECTED_TO_PRIMARY = "connected_to_primary";
   }
 
-  public static interface HdfsLeaderTableDef extends LeDescriptorTableDef {
-    public static String TABLE_NAME = "hdfs_le_descriptors";
+  public interface HdfsLeaderTableDef extends LeDescriptorTableDef {
+    String TABLE_NAME = "hdfs_le_descriptors";
   }
 
-  public static interface YarnLeaderTableDef extends LeDescriptorTableDef {
-    public static final String TABLE_NAME = "yarn_le_descriptors";
+  public interface YarnLeaderTableDef extends LeDescriptorTableDef {
+    String TABLE_NAME = "yarn_le_descriptors";
   }
 }
